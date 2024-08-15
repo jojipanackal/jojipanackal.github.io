@@ -1,0 +1,284 @@
+body {
+  font-family: "Courier Prime", Courier, monospace;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+header {
+  background-color: #4a4a4a;
+  color: #fff;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 70px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #fff;
+  color: #4a4a4a;
+}
+
+nav ul li a {
+  min-width: 100px;
+  text-align: center;
+}
+
+nav ul li a.active {
+  background-color: #fff;
+  color: #4a4a4a;
+}
+
+header {
+  padding: 1rem 0;
+}
+
+main {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about,
+#skills,
+#contact {
+  padding: 20px;
+}
+
+#about,
+#contact {
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+#about h2 {
+  margin: 50px;
+  padding: 10px;
+  background-color: #fff;
+  color: #4a4a4a;
+}
+
+#skills h2 {
+  margin: 50px;
+  padding: 10px;
+  color: #fff;
+  background-color: #4a4a4a;
+}
+
+#about p {
+  text-align: justify;
+  margin: 0 350px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.intro-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: zoomIn 1s ease-in-out forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #333;
+  animation: typing 4s steps(30, end) 1s forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+.intro-text {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+
+footer {
+  background-color: #fff;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+#skills {
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.skills-container {
+  width: 800px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.progress {
+  background-color: #4a4a4a;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.percentage {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4a4a4a;
+  font-weight: bold;
+  z-index: 1;
+}
+
+#contact {
+  padding: 20px;
+  background-color: #4a4a4a;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-link i {
+  font-size: 4rem;
+}
+
+#contact h2 {
+  color: #4a4a4a;
+  background-color: white;
+  padding: 20px;
+}
